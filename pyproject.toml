@@ -1,0 +1,43 @@
+[tool.black]
+line-length = 88
+extend-exclude = '''
+/(
+  # The following are specific to Black, you probably don't want those.
+  | typings
+)/
+'''
+
+[tool.isort]
+profile = "black"
+extend_skip_glob = [
+    "typings/**",
+    "wip/**",
+]
+
+[tool.flake8]
+per-file-ignores = [
+]
+exclude = [
+    "wip/**",
+    "typings/**",
+    "auth_practice.py",
+    "image/http_req.py",
+]
+max-line-length = 88
+count = true
+
+[tool.pyright]
+pythonVersion = "3.11"
+exclude = [
+    "**/__pycache__",
+    "typings",
+    "wip/**",
+    "auth_practice.py",
+    "regular_expression.py",
+    "image/http_req.py",
+]
+
+stubPath = "typings"
+
+[tool.pytest.ini_options]
+testpaths = ["tests", ]

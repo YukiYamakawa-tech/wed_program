@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.txt
 
 # C extensions
 *.so
@@ -138,7 +139,7 @@ venv.bak/
 # Rope project settings
 .ropeproject
 *.ipynb
-
+.txt
 # mkdocs documentation
 /site
 

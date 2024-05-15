@@ -6,8 +6,23 @@ name = "pypi"
 [packages]
 jupyter = "*"
 libretranslate = "*"
+fire = "*"
+aiohttp = "*"
+certifi = "*"
+httpx = "*"
 
 [dev-packages]
+black = "*"
+flake8-pyproject = "*"
+isort = "*"
+pyright = "*"
+pytest = "*"
+pytest-mock = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.11"
+
+[scripts]
+fmt = "bash -c 'black . && isort .'"
+lint = "bash -c 'black --check . && isort --diff --check-only . && flake8 . && pyright'"

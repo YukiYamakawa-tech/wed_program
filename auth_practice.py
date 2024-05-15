@@ -1,8 +1,8 @@
+import hashlib
 import re
 import urllib
-import urllib.request
 import urllib.error
-import hashlib
+import urllib.request
 import uuid
 from pprint import pprint
 
@@ -44,8 +44,7 @@ def https_digest_test(url, auth_data=None):
         return match
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     url = "https://httpbin.org/digest-auth/auth/myname/mypass"
     user = "myname"
     passwd = "mypass"
